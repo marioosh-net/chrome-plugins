@@ -1,0 +1,26 @@
+{
+  "name": "My Chrome Extension",
+  "version": "1.0",
+  "description": "__MSG_description__",
+  "icons": { "16": "images/icon16.png",
+             "48": "images/icon48.png",
+            "128": "images/icon128.png" },  
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "My Chrome Extension",
+    "popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["js/contentscript.js"]
+    }
+  ],  
+  "permissions": [
+    "history",
+    "tabs"
+  ],
+  "default_locale": "pl"
+}
